@@ -10,5 +10,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Utils.MOD_ID);
-    public static final RegistryObject<Item> eightBurger = ITEMS.register("eightBurger", EightBurger::new);
+    public static final RegistryObject<Item> eightBurger = ITEMS.register("eight_burger", EightBurger::new);
+    public static RegistryObject<Item> burgerSword = ITEMS.register("burger_sword", BurgerSword::new);
 }

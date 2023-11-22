@@ -1,33 +1,23 @@
 package com.tutorial.boson.lbmzxhb;
 
-import net.minecraft.entity.player.PlayerEntity;
+import com.tutorial.boson.group.ModGroup;
+import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.world.World;
-import org.apache.commons.io.FileUtils;
-
-import java.io.File;
-import java.io.IOException;
-import java.nio.charset.Charset;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 
 public class EightBurger extends Item {
+    private static final Food food = (new Food.Builder())
+            .saturation(20)
+            .hunger(0)
+            .effect(() -> new EffectInstance(Effects.POISON, 3 * 20, 1), 1)
+            .effect(() -> new EffectInstance(Effects.BLINDNESS, 3 * 20, 1), 1)
+            .effect(() -> new EffectInstance(Effects.HUNGER, 3 * 20, 1), 1)
+            .effect(() -> new EffectInstance(Effects.NIGHT_VISION, 3 * 20, 1), 1)
+            .build();
     public EightBurger() {
-        super(new Properties().group(ItemGroup.FOOD));
+        super(new Properties().food(food).group(ModGroup.itemGroup));
     }
 
-    @Override
-    public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
-        if (!worldIn.isRemote) {
-            File file = new File("test" + File.separator + "test.txt");
-            try {
-                FileUtils.writeStringToFile(file, "test", Charset.defaultCharset());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return super.onItemRightClick(worldIn, playerIn, handIn);
-    }
 }

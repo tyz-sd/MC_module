@@ -9,6 +9,5 @@ public class Boson {
     public Boson() {
         ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
-
 }
 
