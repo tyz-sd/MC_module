@@ -2,5 +2,13 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "boson:item/eight_burger"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "boson:size": 16
+      },
+      "model": "boson:item/eight_burgers"
+    }
+  ]
 }

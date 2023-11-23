@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "boson:item/burger_sword"
+    "layer0": "boson:item/eight_burgers"
   }
 }

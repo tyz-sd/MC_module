@@ -1,5 +1,6 @@
 package com.tutorial.boson.lbmzxhb;
 
+import com.tutorial.boson.group.ModGroup;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -17,7 +18,7 @@ public class BurgerSword extends SwordItem {
         .effect(() -> new EffectInstance(Effects.NIGHT_VISION, 3 * 20, 1), 1)
         .build();
     public BurgerSword() {
-        super(ModItemTier.BURGER, 3, -2.4F, new Item.Properties().food(food).group(ItemGroup.COMBAT));
+        super(ModItemTier.BURGER, 3, -2.4F, new Item.Properties().food(food).group(ModGroup.itemGroup));
     }
 
 }
