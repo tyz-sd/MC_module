@@ -5,6 +5,7 @@ import com.tutorial.boson.Utils;
 import com.tutorial.boson.group.ModGroup;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.potion.EffectInstance;
@@ -31,5 +32,6 @@ public class ItemRegistry {
     public static final RegistryObject<Item> burgerChestplate = ITEMS.register("burger_chestplate", () -> new ArmorItem(ModArmorMaterial.BURGER, EquipmentSlotType.CHEST, (new Item.Properties().food(food)).group(ModGroup.itemGroup)));
     public static final RegistryObject<Item> burgerLeggings = ITEMS.register("burger_leggings", () -> new ArmorItem(ModArmorMaterial.BURGER, EquipmentSlotType.LEGS, (new Item.Properties().food(food)).group(ModGroup.itemGroup)));
     public static final RegistryObject<Item> burgerBoots = ITEMS.register("burger_boots", () -> new ArmorItem(ModArmorMaterial.BURGER, EquipmentSlotType.FEET, (new Item.Properties().food(food)).group(ModGroup.itemGroup)));
+    public static final RegistryObject<Item> burgerBlock = ITEMS.register("burger_block", () -> new BlockItem(BlockRegistry.burgerBlock.get(), new Item.Properties().group(ModGroup.itemGroup)));
 
 }

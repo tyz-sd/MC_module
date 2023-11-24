@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "boson:block/burger_left",
+    "up": "boson:block/burger_top",
+    "down": "boson:block/burger_bottom",
+    "north": "boson:block/burger_left",
+    "south": "boson:block/burger_left",
+    "east": "boson:block/burger_left",
+    "west": "boson:block/burger_left"
+  }
+}
